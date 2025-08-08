@@ -15,6 +15,6 @@ class ApiKeySeeder extends Seeder
     public function run(): void
     {
         ApiKey::truncate();
-        ApiKey::create(['keys' => Str::random(50)]);
+        ApiKey::create(['key' => Str::random(50)]);
     }
 }

@@ -35,10 +35,4 @@ RUN php artisan view:clear
 
 RUN php artisan optimize
 
-RUN chown -R application:application .
-RUN composer install --no-interaction --optimize-autoloader
-
-# RUN php artisan app:test-email
-# RUN /usr/bin/crontab /crontab.txt
-
 EXPOSE 80

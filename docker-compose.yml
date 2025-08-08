@@ -1,0 +1,37 @@
+version: "3.8"
+
+services:
+
+    app:
+        platform: linux/amd64
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "8080:80"
+        volumes:
+            - .:/app
+        depends_on:
+            - mysql
+        environment:
+            DB_CONNECTION: mysql
+            DB_HOST: mysql
+            DB_PORT: 3306
+            DB_DATABASE: jsonplaceholder-fetcher-db
+            DB_USERNAME: root
+            DB_PASSWORD: root
+
+    mysql:
+        image: mysql:8.0
+        platform: linux/amd64
+        ports:
+            - "3307:3306"
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: jsonplaceholder-fetcher-db
+        volumes:
+            - db-data:/var/lib/mysql
+
+volumes:
+    db-data:
