@@ -63,7 +63,8 @@ To authenticate API requests:
 
 1. Open your database and look for the `api_keys` table.
 2. Copy one of the generated keys.
-3. In **Postman** or any API client, add the following header:
+3. In **Postman** import JsonPlaceHolder Fetcher.postman_collection located in the app directory.
+4. In **Postman** or any API client, add the following header:
 
 X-API-KEY: your-api-key-here
 
