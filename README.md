@@ -46,3 +46,38 @@ Follow these steps to run this project on your local machine:
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
 ```
+
+### 2. Install Dependencies
+
+```bash
+composer install
+```
+
+### 3. Create Environment File
+
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+### 4. Run Migrations
+
+```bash
+php artisan migrate
+```
+
+### 5. Seed the API Keys
+
+```bash
+php artisan db:seed
+```
+
+### 🔐 API Authentication
+
+To authenticate API requests:
+
+1. Open your database and look for the `api_keys` table.
+2. Copy one of the generated keys.
+3. In **Postman** or any API client, add the following header:
+
+X-API-KEY: your-api-key-here
