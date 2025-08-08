@@ -43,8 +43,8 @@ Follow these steps to run this project on your local machine:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/johnvergilbulac93/jsonplaceholder-fetcher-app.git
+cd jsonplaceholder-fetcher-app
 ```
 
 ### 2. Install Dependencies
